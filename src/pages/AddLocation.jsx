@@ -1,32 +1,45 @@
+import { useNavigate } from 'react-router';
+
 function AddLocation() {
 
+    const navigate = useNavigate();
+
     const handleSubmit = async (e) => {
-        e.preventDefault();
 
-        const form = e.target;
 
-        const location = {
-            lat: form[0].value,
-            lng: form[1].value,
-            address: form[2].value,
-            cleanlinessRating: form[3].value,
-            locationRating: form[4].value,
-            description: form[5].value,
-            image: form[6].value,
-            currentUserId: localStorage.getItem("currentUserId")
-        }
+        try {
+            e.preventDefault();
 
-        const config = {
-            method: "POST",
-            body: JSON.stringify(location),
-            headers: {
-                "Content-type": "application/json"
+            const form = e.target;
+
+            const location = {
+                lat: form[0].value,
+                lng: form[1].value,
+                address: form[2].value,
+                cleanlinessRating: form[3].value,
+                locationRating: form[4].value,
+                description: form[5].value,
+                image: form[6].value,
+                currentUserId: localStorage.getItem("currentUserId")
             }
-        }
 
-        const response = await fetch('/newlocation', config);
-        const newLocation = await response.json();
-        console.log(newLocation);
+            const config = {
+                method: "POST",
+                body: JSON.stringify(location),
+                headers: {
+                    "Content-type": "application/json"
+                }
+            }
+
+            const response = await fetch('/newlocation', config);
+            const newLocation = await response.json();
+            console.log(newLocation);
+
+            if (newLocation) navigate("/");
+
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
