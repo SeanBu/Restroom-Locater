@@ -1,7 +1,7 @@
 import { useMemo, useEffect, useState } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 
-function Map() {
+function Map(props) {
     const [markers, setMarkers] = useState(null)
 
 
@@ -20,8 +20,6 @@ function Map() {
         fetchData();
     }, [])
 
-    console.log(markers)
-
     const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
 
     const { isLoaded } = useLoadScript({
@@ -32,9 +30,8 @@ function Map() {
     return (
         < div >
             <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
-                <MarkerF position={center} />
                 {markers ? markers.map(marker => {
-                    return <MarkerF onClick={() => console.log("marker click")} position={{ lat: marker.lat, lng: marker.lng }} />
+                    return <MarkerF onClick={() => props.setRestInfo(marker)} position={{ lat: marker.lat, lng: marker.lng }} />
                 }) : console.log('Loading markers...')}
             </GoogleMap>
         </div >
