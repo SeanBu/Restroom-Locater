@@ -1,4 +1,5 @@
 import Map from '../components/Map';
+import AddLocationButton from '../components/AddLocationButton';
 
 function Main() {
 
@@ -10,6 +11,7 @@ function Main() {
     return (
         <div>
             <Map />
+            <AddLocationButton />
             <form onSubmit={logout}>
                 <input type="submit" value="Logout" />
             </form>

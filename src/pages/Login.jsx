@@ -29,6 +29,7 @@ function Login() {
         console.log(response);
         console.log(currentUser);
 
+        localStorage.setItem("currentUserId", currentUser.id)
         localStorage.setItem("token", currentUser.token)
     }
 
