@@ -34,7 +34,7 @@ function Map() {
             <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
                 <MarkerF position={center} />
                 {markers ? markers.map(marker => {
-                    return <MarkerF position={{ lat: marker.lat, lng: marker.lng }} />
+                    return <MarkerF onClick={() => console.log("marker click")} position={{ lat: marker.lat, lng: marker.lng }} />
                 }) : console.log('Loading markers...')}
             </GoogleMap>
         </div >
