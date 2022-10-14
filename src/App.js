@@ -6,6 +6,10 @@ import Main from './pages/Main';
 import Navbar from './components/Navbar'
 import AddLocation from './pages/AddLocation';
 import Admin from './pages/Admin';
+import Reports from './pages/Reports';
+import Restrooms from './pages/Restrooms';
+import Users from './pages/Users';
+import Submissions from './pages/Submissions';
 
 function App() {
   return (
@@ -17,10 +21,10 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/addlocation" element={<AddLocation />} />
         <Route exact path="/admin" element={<Admin />} />
-        <Route exact path="/admin/reports" />
-        <Route exact path="/admin/restrooms" />
-        <Route exact path="/admin/users" />
-        <Route exact path="/admin/submissions" />
+        <Route exact path="/admin/reports" element={<Reports />} />
+        <Route exact path="/admin/restrooms" element={<Restrooms />} />
+        <Route exact path="/admin/users" element={<Users />} />
+        <Route exact path="/admin/submissions" element={<Submissions />} />
       </Routes>
     </div>
   );
