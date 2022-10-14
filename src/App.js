@@ -17,6 +17,10 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/addlocation" element={<AddLocation />} />
         <Route exact path="/admin" element={<Admin />} />
+        <Route exact path="/admin/reports" />
+        <Route exact path="/admin/restrooms" />
+        <Route exact path="/admin/users" />
+        <Route exact path="/admin/submissions" />
       </Routes>
     </div>
   );
