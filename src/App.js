@@ -5,6 +5,7 @@ import Register from './pages/Register';
 import Main from './pages/Main';
 import Navbar from './components/Navbar'
 import AddLocation from './pages/AddLocation';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/addlocation" element={<AddLocation />} />
+        <Route exact path="/admin" element={<Admin />} />
       </Routes>
     </div>
   );
