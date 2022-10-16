@@ -20,7 +20,7 @@ function Map(props) {
         fetchData();
     }, [])
 
-    const center = useMemo(() => ({ lat: 40.874898061359595, lng: -73.88778667684886 }), []);
+    const center = useMemo(() => ({ lat: 40.669349029701706, lng: -74.04245499959639 }), []);
 
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GMAPAPIKEY,

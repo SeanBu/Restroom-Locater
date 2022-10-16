@@ -4,7 +4,7 @@ function AddLocationButton() {
     return (
         <div>
             <Link to="/addlocation">
-                <button>Add New Restroom</button>
+                <button className="newRestoom">Add New Restroom</button>
             </Link>
         </div>
     )

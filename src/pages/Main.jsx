@@ -5,10 +5,10 @@ import RestroomInfo from '../components/RestroomInfo';
 
 function Main() {
 
-    const [restInfo, setRestInfo] = useState({ lat: 0, lng: 0 })
+    const [restInfo, setRestInfo] = useState([])
 
     return (
-        <div>
+        <div className='main'>
             <Map setRestInfo={setRestInfo} />
             <AddLocationButton />
             <RestroomInfo restInfo={restInfo} />

@@ -4,7 +4,7 @@ body {
 }
 
 .map-container {
-    height: 40vh;
+    height: 50vh;
     width: 100%;
 }
 
@@ -31,4 +31,8 @@ body {
 .admin,
 .logout {
     float: right;
+}
+
+.main>button {
+    padding: 5em;
 }
