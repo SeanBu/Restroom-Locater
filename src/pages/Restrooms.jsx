@@ -7,7 +7,7 @@ function Restrooms() {
     const [restrooms, setRestrooms] = useState([]);
 
     async function fetchData() {
-        const response = await fetch("/admin/allrestrooms", { headers: { "Content-type": "application/json" } });
+        const response = await fetch("https://restroom-locater.herokuapp.com/admin/allrestrooms", { headers: { "Content-type": "application/json" } });
         const jResponse = await response.json();
         setRestrooms(...jResponse);
     }

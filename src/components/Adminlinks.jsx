@@ -10,16 +10,16 @@ function Adminlinks() {
     const [submissions, setSubmissions] = useState(0);
 
     async function fetchData() {
-        const reportsResponse = await fetch("/admin/numreports", { headers: { "Content-type": "application/json" } });
+        const reportsResponse = await fetch("https://restroom-locater.herokuapp.com/admin/numreports", { headers: { "Content-type": "application/json" } });
         const jReportsResponse = await reportsResponse.json();
 
-        const restroomsResponse = await fetch("admin/restrooms", { headers: { "Content-type": "application/json" } });
+        const restroomsResponse = await fetch("https://restroom-locater.herokuapp.com/admin/restrooms", { headers: { "Content-type": "application/json" } });
         const jRestroomsResponse = await restroomsResponse.json();
 
-        const usersResponse = await fetch("/admin/users", { headers: { "Content-type": "application/json" } });
+        const usersResponse = await fetch("https://restroom-locater.herokuapp.com/admin/users", { headers: { "Content-type": "application/json" } });
         const jUsersResponse = await usersResponse.json();
 
-        const submissionsResponse = await fetch("admin/submissions", { headers: { "Content-type": "application/json" } });
+        const submissionsResponse = await fetch("https://restroom-locater.herokuapp.com/admin/submissions", { headers: { "Content-type": "application/json" } });
         const jSubmissionsResponse = await submissionsResponse.json();
 
         setReports(jReportsResponse);

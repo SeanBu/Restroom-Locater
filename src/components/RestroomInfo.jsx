@@ -16,7 +16,7 @@ function RestroomInfo(props) {
             },
         }
 
-        const response = await fetch('/admin/report', configs);
+        const response = await fetch('https://restroom-locater.herokuapp.com/admin/report', configs);
         const sResponse = await response.json();
         console.log(sResponse);
     }

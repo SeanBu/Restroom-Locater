@@ -7,7 +7,7 @@ function Map(props) {
 
     async function fetchData() {
         try {
-            const response = await fetch("/getmarkers", { headers: { "Content-type": "application/json" } });
+            const response = await fetch("https://restroom-locater.herokuapp.com/getmarkers", { headers: { "Content-type": "application/json" } });
             const incMarkers = await response.json();
             console.log(incMarkers);
             setMarkers(incMarkers)
