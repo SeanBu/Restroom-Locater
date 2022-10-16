@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 import { useEffect } from 'react';
-import styles from "../components/css/Form.module.css"
+import styles from '../components/css/Form.module.css';
 
 function Login() {
 
