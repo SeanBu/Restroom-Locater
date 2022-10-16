@@ -25,22 +25,22 @@ function RestroomInfo(props) {
         <div className={styles.superContainer}>
             <div className={styles.infoContainer}>
                 <div className={styles.lat}>
-                    <h1>Latitude: {props.restInfo.lat}</h1>
+                    <h1>Latitude: </h1><p>{props.restInfo.lat}</p>
                 </div>
                 <div className={styles.lng}>
-                    <h1>Longitude: {props.restInfo.lng}</h1>
+                    <h1>Longitude: </h1><p>{props.restInfo.lng}</p>
                 </div>
                 <div className={styles.address}>
-                    <h1>Address: {props.restInfo.address}</h1>
+                    <h1>Address: </h1><p>{props.restInfo.address}</p>
                 </div>
                 <div className={styles.cRating}>
-                    <h1>Cleanliness Rating: {props.restInfo.cleanlinessRating}</h1>
+                    <h1>Cleanliness Rating: </h1><p>{props.restInfo.cleanlinessRating}</p>
                 </div>
                 <div className={styles.lRating}>
-                    <h1>Location Rating: {props.restInfo.locationRating}</h1>
+                    <h1>Location Rating: </h1><p>{props.restInfo.locationRating}</p>
                 </div>
                 <div className={styles.description}>
-                    <h1>Description: {props.restInfo.description}</h1>
+                    <h1>Description: </h1><p>{props.restInfo.description}</p>
                 </div>
                 <div className={styles.img}>
                     <img src={props.restInfo.image}></img>
