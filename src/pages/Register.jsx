@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router';
 import { useEffect } from 'react';
+import styles from '../components/css/Form.module.css';
 
 function Register() {
 
@@ -26,9 +27,6 @@ function Register() {
         const response = await fetch('https://restroom-locater.herokuapp.com/auth/register', config);
         const currentUser = await response.json();
 
-        console.log(response);
-        console.log(currentUser);
-
         localStorage.setItem("token", currentUser.token);
         navigate("/login");
     }
@@ -43,15 +41,17 @@ function Register() {
     }, [])
 
     return (
-        <form onSubmit={handleLogin}>
-            <label htmlFor='username'>Username:</label>
-            <input required type="text" name='username' />
-            <label htmlFor='=email'>Email:</label>
-            <input required type="email" name='email' />
-            <label htmlFor='password'>Password:</label>
-            <input required type="password" name='password' />
-            <input type="submit" value="Submit" />
-        </form>
+        <div className={styles.registerContainer}>
+            <form onSubmit={handleLogin}>
+                <label htmlFor='username'>Username:</label>
+                <input required type="text" name='username' />
+                <label htmlFor='=email'>Email:</label>
+                <input required type="email" name='email' />
+                <label htmlFor='password'>Password:</label>
+                <input required type="password" name='password' />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
     )
 }
 
