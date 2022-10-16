@@ -49,7 +49,7 @@ function Register() {
                 <input required type="email" name='email' />
                 <label htmlFor='password'>Password:</label>
                 <input required type="password" name='password' />
-                <input type="submit" value="Submit" />
+                <input className={styles.registerButton} type="submit" value="Submit" />
             </form>
         </div>
     )

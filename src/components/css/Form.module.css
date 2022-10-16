@@ -1,3 +1,19 @@
+input {
+    width: 20vw;
+    height: 6vh;
+    font-size: larger;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.loginButton,
+.registerButton {
+    font-size: larger;
+    font-weight: bold;
+    margin: 1em;
+    border-radius: 10px;
+}
+
 .loginContainer,
 .registerContainer {
     position: absolute;

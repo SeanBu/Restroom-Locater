@@ -50,7 +50,7 @@ function Login() {
                 <input id="username" required type="text" />
                 <label for="password">Password:</label>
                 <input id="password" required type="password" />
-                <input type="submit" value="Submit" />
+                <input className={styles.loginButton} type="submit" value="Submit" />
             </form>
         </div>
     )
