@@ -43,7 +43,7 @@ function RestroomInfo(props) {
                     <h1>Description: </h1><p>{props.restInfo.description}</p>
                 </div>
                 <div className={styles.img}>
-                    <img src={props.restInfo.image}></img>
+                    <img src={props.restInfo.image} alt="restroom"></img>
                 </div>
             </div>
             <button className={styles.reportButton} onClick={() => reportRestroom(props.restInfo.restroom)}>Report Submission</button>
