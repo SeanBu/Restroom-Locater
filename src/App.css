@@ -22,3 +22,7 @@
 .navLink:visited {
     color: black;
 }
+
+.logout {
+    float: right;
+}

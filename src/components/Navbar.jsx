@@ -13,7 +13,7 @@ function Navbar() {
                 <li className='navItem'><Link className='navLink' to="/">Home</Link></li>
                 <li className='=navItem'><Link className='navLink' to="/login">Login</Link></li>
                 <li className='navItem'><Link className='navLink' to="/register">Register</Link></li>
-                <li className='navItem'><Link className='navLink' onClick={logout} to="/">Logout</Link></li>
+                <li className='navItem logout'><Link className='navLink' onClick={logout} to="/">Logout</Link></li>
             </ul>
         </div>
     )
