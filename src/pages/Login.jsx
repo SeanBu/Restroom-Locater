@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router';
 import { useEffect } from 'react';
+import styles from "../components/css/Form.module.css"
 
 function Login() {
 
@@ -43,11 +44,13 @@ function Login() {
     }, [])
 
     return (
-        <form onSubmit={handleLogin}>
-            <input required type="text" />
-            <input required type="password" />
-            <input type="submit" value="Submit" />
-        </form>
+        <div className={styles.loginContainer}>
+            <form onSubmit={handleLogin}>
+                <input required type="text" />
+                <input required type="password" />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
     )
 }
 
