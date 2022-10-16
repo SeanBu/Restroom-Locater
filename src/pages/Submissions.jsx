@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import styles from '../components/css/Admin.module.css';
+import { Helmet } from 'react-helmet';
 
 function Submissions() {
     const [submissions, setSubmissions] = useState([]);
@@ -14,12 +16,22 @@ function Submissions() {
     }, [])
     return (
         <div>
+
             {submissions ? submissions.map(submission => {
                 return (
-                    <div>
-                        <p>Submission Id: {submission._id}</p>
-                        <p>User Id: {submission.user}</p>
-                        <p>Restroom Id: {submission.restroom}</p>
+                    <div className={styles.submissionsContainer}>
+                        <Helmet>
+                            <style>{'body { background-color: black; }'}</style>
+                        </Helmet>
+                        <div className={styles.submissionsHeader}>
+                            <p>Submission Id: <div className={styles.submissionsData}>{submission._id}</div></p>
+                        </div>
+                        <div className={styles.submissionsHeader}>
+                            <p>User Id: <div className={styles.submissionsData}>{submission.user}</div></p>
+                        </div>
+                        <div className={styles.submissionsHeader}>
+                            <p>Restroom Id: <div className={styles.submissionsData}>{submission.restroom}</div></p>
+                        </div>
                         <br></br>
                     </div>
                 )

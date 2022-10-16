@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import styles from '../components/css/Admin.module.css';
+import { Helmet } from 'react-helmet';
 
 function Users() {
 
@@ -20,11 +22,23 @@ function Users() {
         <div>
             {users ? users.map(user => {
                 return (
-                    <div>
-                        <p>User Id: {user._id}</p>
-                        <p>Username: {user.username}</p>
-                        <p>User Email: {user.email}</p>
-                        <p>User Submissions: {user.submissions}</p>
+                    <div className={styles.usersContainer}>
+                        <Helmet>
+                            <style>{'body { background-color: black; }'}</style>
+                        </Helmet>
+                        <div className={styles.usersHeader}>
+                            <p>User Id: <div className={styles.usersData}>{user._id}</div></p>
+                        </div>
+                        <div className={styles.usersHeader}>
+                            <p>Username: <div className={styles.usersData}>{user.username}</div></p>
+                        </div>
+                        <div className={styles.usersHeader}>
+                            <p>User Email: <div className={styles.usersData}>{user.email}</div></p>
+                        </div>
+                        <div className={styles.usersHeader}>
+                            <p>User Submissions: <div className={styles.usersData}>{user.submissions}</div></p>
+                        </div>
+                        <br></br>
                     </div>
                 )
             }) : console.log("Loading Users...")}

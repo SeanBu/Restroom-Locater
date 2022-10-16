@@ -30,24 +30,32 @@
     text-decoration: none;
 }
 
-.reportContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.reportContainer,
+.restroomContainer,
+.usersContainer,
+.submissionsContainer {
+    margin: auto;
+    width: 25%;
     color: greenyellow;
 }
 
-.reportHeader {
+.reportHeader,
+.restroomHeader,
+.usersHeader,
+.submissionsHeader {
     border: solid white 2px;
 }
 
-.reportData {
+.reportData,
+.restroomData,
+.usersData,
+.submissionsData {
     float: right;
     display: inline;
 }
 
-.reportImage {
+.reportImage,
+.restroomImage {
     height: 25vh;
     width: max-content;
 

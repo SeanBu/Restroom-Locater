@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import styles from '../components/css/Admin.module.css';
+import { Helmet } from 'react-helmet';
 
 function Restrooms() {
 
@@ -18,16 +20,34 @@ function Restrooms() {
         <div>
             {restrooms ? restrooms.map(restroom => {
                 return (
-                    <div>
-                        <p>Restroom Id: {restroom._id}</p>
-                        <p>Lat: {restroom.lat}</p>
-                        <p>Lng Email: {restroom.lng}</p>
-                        <p>Address: {restroom.address}</p>
-                        <p>Cleanliness Rating: {restroom.cleanlinessRating}</p>
-                        <p>Location Rating: {restroom.locationRating}</p>
-                        <p>Description: {restroom.description}</p>
-                        <p>Image:</p>
-                        <img src={restroom.image} alt="Restroom Image"></img>
+                    <div className={styles.restroomContainer}>
+                        <Helmet>
+                            <style>{'body { background-color: black; }'}</style>
+                        </Helmet>
+                        <div className={styles.restroomHeader}>
+                            <p>Restroom Id: <div className={styles.restroomData}>{restroom._id}</div></p>
+                        </div>
+                        <div className={styles.restroomHeader}>
+                            <p>Lat: <div className={styles.restroomData}>{restroom.lat}</div></p>
+                        </div>
+                        <div className={styles.restroomHeader}>
+                            <p>Lng Email: <div className={styles.restroomData}>{restroom.lng}</div></p>
+                        </div>
+                        <div className={styles.restroomHeader}>
+                            <p>Address: <div className={styles.restroomData}>{restroom.address}</div></p>
+                        </div>
+                        <div className={styles.restroomHeader}>
+                            <p>Cleanliness Rating: <div className={styles.restroomData}>{restroom.cleanlinessRating}</div></p>
+                        </div>
+                        <div className={styles.restroomHeader}>
+                            <p>Location Rating: <div className={styles.restroomData}>{restroom.locationRating}</div></p>
+                        </div>
+                        <div className={styles.restroomHeader}>
+                            <p>Description: <div className={styles.restroomData}>{restroom.description}</div></p>
+                        </div>
+                        <div className={styles.restroomImage}>
+                            <img src={restroom.image} alt="Restroom Image"></img>
+                        </div>
                         <br></br>
                     </div>
                 )
