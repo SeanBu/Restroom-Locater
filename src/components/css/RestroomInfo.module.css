@@ -1,5 +1,6 @@
 img {
     max-height: 40vh;
+    margin-left: 3px;
 }
 
 .reportButton {
@@ -15,6 +16,7 @@ img {
 .infoContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 5em;
 }
 
 .lat {
