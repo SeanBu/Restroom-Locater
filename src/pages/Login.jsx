@@ -46,8 +46,10 @@ function Login() {
     return (
         <div className={styles.loginContainer}>
             <form onSubmit={handleLogin}>
-                <input required type="text" />
-                <input required type="password" />
+                <label for="username">Username: </label>
+                <input id="username" required type="text" />
+                <label for="password">Password:</label>
+                <input id="password" required type="password" />
                 <input type="submit" value="Submit" />
             </form>
         </div>
