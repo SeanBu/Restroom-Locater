@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import styles from '../components/css/Admin.module.css';
+import { Helmet } from 'react-helmet';
 
 function Adminlinks() {
     const [reports, setReports] = useState(0);
@@ -32,14 +34,22 @@ function Adminlinks() {
 
 
     return (
-        <div>
-            <Link to="/admin/reports">Reports {`[${reports}]`}</Link>
-            <br></br>
-            <Link to="/admin/restrooms">Restrooms {`[${restrooms}]`}</Link>
-            <br></br>
-            <Link to="/admin/users">Users {`[${users}]`}</Link>
-            <br></br>
-            <Link to="/admin/submissions">Submissions {`[${submissions}]`}</Link>
+        <div className={styles.linksContainer}>
+            <Helmet>
+                <style>{'body { background-color: black; }'}</style>
+            </Helmet>
+            <div className={styles.adminLink}>
+                <Link to="/admin/reports">Reports <div className={styles.adminTotals}>{`[${reports}]`}</div></Link>
+            </div>
+            <div className={styles.adminLink}>
+                <Link to="/admin/restrooms">Restrooms <div className={styles.adminTotals}>{`[${restrooms}]`}</div></Link>
+            </div>
+            <div className={styles.adminLink}>
+                <Link to="/admin/users">Users <div className={styles.adminTotals}>{`[${users}]`}</div></Link>
+            </div>
+            <div className={styles.adminLink}>
+                <Link to="/admin/submissions">Submissions <div className={styles.adminTotals}>{`[${submissions}]`}</div></Link>
+            </div>
         </div>
     )
 }

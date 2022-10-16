@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+.linksContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.adminTotals {
+    float: right;
+    display: inline;
+}
+
+.adminLink {
+    border: solid white 2px;
+    color: greenyellow;
+    font-size: 2em;
+}
+
+.adminLink>a:visited {
+    color: greenyellow;
+}
+
+.adminLink>a {
+    text-decoration: none;
+}
