@@ -1,3 +1,5 @@
+import styles from '../components/css/RestroomInfo.module.css'
+
 function RestroomInfo(props) {
 
     async function reportRestroom(restroom) {
@@ -20,15 +22,31 @@ function RestroomInfo(props) {
     }
 
     return (
-        <div>
-            <h1>Latitude: {props.restInfo.lat}</h1>
-            <h1>Longitude: {props.restInfo.lng}</h1>
-            <h1>Address: {props.restInfo.address}</h1>
-            <h1>Cleanliness Rating: {props.restInfo.cleanlinessRating}</h1>
-            <h1>Location Rating: {props.restInfo.locationRating}</h1>
-            <h1>Description: {props.restInfo.description}</h1>
-            <img src={props.restInfo.image}></img>
-            <button onClick={() => reportRestroom(props.restInfo.restroom)}>Report Submission</button>
+        <div className={styles.superContainer}>
+            <div className={styles.infoContainer}>
+                <div className={styles.lat}>
+                    <h1>Latitude: {props.restInfo.lat}</h1>
+                </div>
+                <div className={styles.lng}>
+                    <h1>Longitude: {props.restInfo.lng}</h1>
+                </div>
+                <div className={styles.address}>
+                    <h1>Address: {props.restInfo.address}</h1>
+                </div>
+                <div className={styles.cRating}>
+                    <h1>Cleanliness Rating: {props.restInfo.cleanlinessRating}</h1>
+                </div>
+                <div className={styles.lRating}>
+                    <h1>Location Rating: {props.restInfo.locationRating}</h1>
+                </div>
+                <div className={styles.description}>
+                    <h1>Description: {props.restInfo.description}</h1>
+                </div>
+                <div className={styles.img}>
+                    <img src={props.restInfo.image}></img>
+                </div>
+            </div>
+            <button className={styles.reportButton} onClick={() => reportRestroom(props.restInfo.restroom)}>Report Submission</button>
         </div>
     )
 }

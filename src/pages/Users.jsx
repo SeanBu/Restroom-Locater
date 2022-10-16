@@ -36,7 +36,7 @@ function Users() {
                             <p>User Email: <div className={styles.usersData}>{user.email}</div></p>
                         </div>
                         <div className={styles.usersHeader}>
-                            <p>User Submissions: <div className={styles.usersData}>{user.submissions}</div></p>
+                            <p>User Submissions: <div className={styles.usersData}>{user.submissions.length}</div></p>
                         </div>
                         <br></br>
                     </div>

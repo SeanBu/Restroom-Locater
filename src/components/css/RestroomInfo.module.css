@@ -1,0 +1,47 @@
+img {
+    max-height: 40vh;
+}
+
+.reportButton {
+    padding: 2em;
+}
+
+.superContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lat {
+    grid-row: 1;
+}
+
+.lng {
+    grid-row: 2;
+}
+
+.address {
+    grid-row: 3;
+}
+
+.cRating {
+    grid-row: 4;
+}
+
+.lRating {
+    grid-row: 5;
+}
+
+.description {
+    grid-row: 6;
+}
+
+.img {
+    grid-row: 1 / span 6;
+    grid-column: 2;
+}
