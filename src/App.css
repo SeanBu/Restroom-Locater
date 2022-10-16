@@ -28,6 +28,7 @@ body {
     color: black;
 }
 
+.admin,
 .logout {
     float: right;
 }

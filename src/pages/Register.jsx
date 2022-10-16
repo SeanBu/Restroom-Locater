@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router';
 import { useEffect } from 'react';
 
-
 function Register() {
 
     const navigate = useNavigate();
@@ -30,7 +29,8 @@ function Register() {
         console.log(response);
         console.log(currentUser);
 
-        localStorage.setItem("token", currentUser.token)
+        localStorage.setItem("token", currentUser.token);
+        navigate("/login");
     }
 
     useEffect(() => {
