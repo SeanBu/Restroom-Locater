@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import styles from '../components/css/Admin.module.css';
+import { Helmet } from 'react-helmet';
 
 function Reports() {
     const [reports, setReports] = useState([])
@@ -37,15 +39,32 @@ function Reports() {
 
     return (
         <div>
+            <Helmet>
+                <style>{'body { background-color: black; }'}</style>
+            </Helmet>
             {reports ? reports.map(submission => {
-                return (<div>
-                    <p>Address: {submission.restroom.address}</p>
-                    <p>Description: {submission.restroom.description}</p>
-                    <img src={submission.restroom.image} alt="restroom image"></img>
-                    <p>Authors User Id: {submission.user._id}</p>
-                    <p>Author: {submission.user.username}</p>
-                    <p>Author Email: {submission.user.email}</p>
-                    <button onClick={() => deleteSubmission(submission)}>Delete</button>
+                return (<div className={styles.reportContainer}>
+                    <div className={styles.reportImage}>
+                        <img src={submission.restroom.image} alt="restroom image"></img>
+                    </div>
+                    <div className={styles.reportHeader}>
+                        <p>Address: <div className={styles.reportData}>{submission.restroom.address}</div></p>
+                    </div>
+                    <div className={styles.reportHeader}>
+                        <p>Description: <div className={styles.reportData}>{submission.restroom.description}</div></p>
+                    </div>
+                    <div className={styles.reportHeader}>
+                        <p>Authors User Id: <div className={styles.reportData}>{submission.user._id}</div></p>
+                    </div>
+                    <div className={styles.reportHeader}>
+                        <p>Author: <div className={styles.reportData}>{submission.user.username}</div></p>
+                    </div>
+                    <div className={styles.reportHeader}>
+                        <p>Author Email: <div className={styles.reportData}>{submission.user.email}</div></p>
+                    </div>
+                    <div className={styles.deleteButton}>
+                        <button onClick={() => deleteSubmission(submission)}>Delete</button>
+                    </div>
                 </div>)
             }) : console.log("Loading Reports...")}
         </div>

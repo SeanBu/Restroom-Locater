@@ -29,3 +29,31 @@
 .adminLink>a {
     text-decoration: none;
 }
+
+.reportContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: greenyellow;
+}
+
+.reportHeader {
+    border: solid white 2px;
+}
+
+.reportData {
+    float: right;
+    display: inline;
+}
+
+.reportImage {
+    height: 25vh;
+    width: max-content;
+
+}
+
+img {
+    width: inherit;
+    height: inherit;
+}

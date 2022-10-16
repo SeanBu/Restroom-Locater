@@ -13,7 +13,7 @@ function Adminlinks() {
         const reportsResponse = await fetch("/admin/numreports", { headers: { "Content-type": "application/json" } });
         const jReportsResponse = await reportsResponse.json();
 
-        const restroomsResponse = await fetch("admin/restrooms", { headers: { "Content-type": "application/json" } })
+        const restroomsResponse = await fetch("admin/restrooms", { headers: { "Content-type": "application/json" } });
         const jRestroomsResponse = await restroomsResponse.json();
 
         const usersResponse = await fetch("/admin/users", { headers: { "Content-type": "application/json" } });
