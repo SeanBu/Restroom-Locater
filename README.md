@@ -9,3 +9,7 @@ Users can scroll around on google maps to find all the public restrooms near the
 
 ## Technologies Used
 ---
+For this app I used the **MERN** stack. Along with the **MERN** stack I used the **Google Maps API**. **Express** was used along with **MongoDB** for my backend. In the backend I have 3 models. One for user, one for restrooms, and one for submissions which tie a user and restroom together. On the frontend I used **React** with **Google Maps API**. Google Maps were used to display the locations of restrooms via markers placed on the map. When a user clicks the marker the information about that particular restroom is shown on the screen under the map. The markers for the Google Map are populated from the restroom model on the backend. I pull all the restrooms from the backend and then map over them pulling out the lng and lat coordinates to create multiple markers. 
+
+## Screenshots
+---

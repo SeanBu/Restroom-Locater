@@ -31,7 +31,7 @@ function EditRestroom() {
             }
         }
 
-        const response = await fetch(`/admin/editrestroom/${restroomID}`, config);
+        const response = await fetch(`https://restroom-locater.herokuapp.com/admin/editrestroom/${restroomID}`, config);
         const currentRestroom = await response.json();
         console.log(currentRestroom);
         navigate("/admin/restrooms");
@@ -44,7 +44,7 @@ function EditRestroom() {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch(`/admin/editrestroom/${restroomID}`, { headers: { "Content-type": "application/json" } });
+            const response = await fetch(`https://restroom-locater.herokuapp.com/admin/editrestroom/${restroomID}`, { headers: { "Content-type": "application/json" } });
             const sResponse = await response.json();
             setNewForm(sResponse);
         }
