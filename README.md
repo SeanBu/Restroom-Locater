@@ -13,3 +13,13 @@ For this app I used the **MERN** stack. Along with the **MERN** stack I used the
 
 ## Screenshots
 ---
+![Main Page](https://i.imgur.com/Y8RcZMl.png)
+This is the main page you see when you first enter the site.
+![Main Page Populated](https://i.imgur.com/Lx66CLy.png)
+This is how the main page gets populated when you click on a marker.
+![Add New Submission](https://i.imgur.com/bLHb3It.png)
+This is the page where you can add a new submission.
+![Edit Submission](https://i.imgur.com/g7yHsx2.png)
+This is the page where you can edit a restroom submission.
+![Admin Panel](https://i.imgur.com/ufNANkV.png)
+This is the admin panel where you can view the data in the data base as well as any submissions that have been reported.
