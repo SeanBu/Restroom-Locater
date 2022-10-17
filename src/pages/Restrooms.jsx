@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import styles from '../components/css/Admin.module.css';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 function Restrooms() {
 
     const [restrooms, setRestrooms] = useState([]);
 
     async function fetchData() {
-        const response = await fetch("https://restroom-locater.herokuapp.com/admin/allrestrooms", { headers: { "Content-type": "application/json" } });
+        const response = await fetch("/admin/allrestrooms", { headers: { "Content-type": "application/json" } });
         const jResponse = await response.json();
         setRestrooms(...jResponse);
     }
@@ -48,6 +49,7 @@ function Restrooms() {
                         <div className={styles.restroomImage}>
                             <img src={restroom.image} alt="Restroom Image"></img>
                         </div>
+                        <Link to={`/admin/restrooms/edit/${restroom._id}`}>Edit Restroom</Link>
                         <br></br>
                     </div>
                 )

@@ -23,7 +23,7 @@ function Login() {
             }
         }
 
-        const response = await fetch('https://restroom-locater.herokuapp.com/auth/login', config);
+        const response = await fetch('/auth/login', config);
         const currentUser = await response.json();
 
         console.log(response);
@@ -36,7 +36,7 @@ function Login() {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("https://restroom-locater.herokuapp.com/auth/isUserAuth", { headers: { "x-access-token": localStorage.getItem("token") } });
+            const response = await fetch("/auth/isUserAuth", { headers: { "x-access-token": localStorage.getItem("token") } });
             const sResponse = await response.json();
             if (sResponse.isLoggedIn) navigate("/");
         }
@@ -46,10 +46,16 @@ function Login() {
     return (
         <div className={styles.loginContainer}>
             <form onSubmit={handleLogin}>
-                <label for="username">Username: </label>
-                <input id="username" required type="text" />
-                <label for="password">Password:</label>
-                <input id="password" required type="password" />
+                <div className={styles.inputContainer}>
+                    <label className={styles.username} for="username">Username </label>
+                    <input className={styles.iUsername} id="username" required type="text" />
+                </div>
+                <br></br>
+                <div className={styles.inputContainer}>
+                    <label className={styles.password} for="password">Password</label>
+                    <input className={styles.iPassword} id="password" required type="password" />
+                </div>
+                <br></br>
                 <input className={styles.loginButton} type="submit" value="Submit" />
             </form>
         </div>

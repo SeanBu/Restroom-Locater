@@ -1,7 +1,7 @@
 {
   "name": "restroom-locater",
   "version": "0.1.0",
-  "proxy": "https://restroom-locater.herokuapp.com/",
+  "proxy": "http://localhost:4000/",
   "private": true,
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.35",

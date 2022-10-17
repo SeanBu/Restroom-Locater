@@ -31,7 +31,7 @@ function AddLocation() {
                 }
             }
 
-            const response = await fetch('https://restroom-locater.herokuapp.com/newlocation', config);
+            const response = await fetch('/newlocation', config);
             const newLocation = await response.json();
             console.log(newLocation);
 

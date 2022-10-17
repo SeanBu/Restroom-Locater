@@ -6,7 +6,7 @@ function Submissions() {
     const [submissions, setSubmissions] = useState([]);
 
     async function fetchData() {
-        const response = await fetch("https://restroom-locater.herokuapp.com/admin/allsubmissions", { headers: { "Content-type": "application/json" } });
+        const response = await fetch("/admin/allsubmissions", { headers: { "Content-type": "application/json" } });
         const jResponse = await response.json();
         setSubmissions(...jResponse);
     }

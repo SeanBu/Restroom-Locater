@@ -24,7 +24,7 @@ function Register() {
             }
         }
 
-        const response = await fetch('https://restroom-locater.herokuapp.com/auth/register', config);
+        const response = await fetch('/auth/register', config);
         const currentUser = await response.json();
 
         localStorage.setItem("token", currentUser.token);
@@ -33,7 +33,7 @@ function Register() {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("https://restroom-locater.herokuapp.com/auth/isUserAuth", { headers: { "x-access-token": localStorage.getItem("token") } });
+            const response = await fetch("/auth/isUserAuth", { headers: { "x-access-token": localStorage.getItem("token") } });
             const sResponse = await response.json();
             if (sResponse.isLoggedIn) navigate("/");
         }
@@ -43,12 +43,21 @@ function Register() {
     return (
         <div className={styles.registerContainer}>
             <form onSubmit={handleLogin}>
-                <label htmlFor='username'>Username:</label>
-                <input required type="text" name='username' />
-                <label htmlFor='=email'>Email:</label>
-                <input required type="email" name='email' />
-                <label htmlFor='password'>Password:</label>
-                <input required type="password" name='password' />
+                <div className={styles.inputContainer}>
+                    <label htmlFor='username'>Username</label>
+                    <input required type="text" name='username' />
+                </div>
+                <br></br>
+                <div className={styles.inputContainer}>
+                    <label htmlFor='=email'>Email</label>
+                    <input required type="email" name='email' />
+                </div>
+                <br></br>
+                <div className={styles.inputContainer}>
+                    <label htmlFor='password'>Password</label>
+                    <input required type="password" name='password' />
+                </div>
+                <br></br>
                 <input className={styles.registerButton} type="submit" value="Submit" />
             </form>
         </div>

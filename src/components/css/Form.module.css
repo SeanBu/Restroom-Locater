@@ -6,6 +6,14 @@ input {
     padding-right: 1em;
 }
 
+form {
+    padding: 2em;
+}
+
+label {
+    margin-right: .5em;
+}
+
 .loginButton,
 .registerButton {
     font-size: larger;
@@ -20,5 +28,26 @@ input {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgb(113, 221, 183);
     text-align: center;
+    border-radius: 20px;
+    border: solid black 5px;
+}
+
+.username,
+.password {
+    float: left;
+}
+
+.iUsername,
+.iPassword {
+    float: right;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1em;
 }

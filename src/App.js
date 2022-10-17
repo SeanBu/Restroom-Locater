@@ -10,6 +10,7 @@ import Reports from './pages/Reports';
 import Restrooms from './pages/Restrooms';
 import Users from './pages/Users';
 import Submissions from './pages/Submissions';
+import EditRestroom from './pages/EditRestroom';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/admin/restrooms" element={<Restrooms />} />
         <Route exact path="/admin/users" element={<Users />} />
         <Route exact path="/admin/submissions" element={<Submissions />} />
+        <Route exact path="/admin/restrooms/edit/:restroomID" element={<EditRestroom />} />
       </Routes>
     </div>
   );

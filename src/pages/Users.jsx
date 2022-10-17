@@ -7,7 +7,7 @@ function Users() {
     const [users, setUsers] = useState([]);
 
     async function fetchData() {
-        const response = await fetch("https://restroom-locater.herokuapp.com/admin/allusers", { headers: { "Content-type": "application/json" } });
+        const response = await fetch("/admin/allusers", { headers: { "Content-type": "application/json" } });
         const jResponse = await response.json();
         setUsers(...jResponse);
     }

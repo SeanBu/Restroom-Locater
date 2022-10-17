@@ -6,7 +6,7 @@ function Reports() {
     const [reports, setReports] = useState([])
 
     async function fetchData() {
-        const response = await fetch("https://restroom-locater.herokuapp.com/admin/reports", { headers: { "Content-type": "application/json" } });
+        const response = await fetch("/admin/reports", { headers: { "Content-type": "application/json" } });
         const jResponse = await response.json();
         setReports(...jResponse)
     }
@@ -26,7 +26,7 @@ function Reports() {
             }
         }
 
-        const response = await fetch('https://restroom-locater.herokuapp.com/admin/reports/delete', config);
+        const response = await fetch('/admin/reports/delete', config);
         const sResponse = await response.json();
         console.log(sResponse);
     }
