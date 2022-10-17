@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import styles from '../components/css/Admin.module.css';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import styles from '../components/css/Admin.module.css';
 
 function Restrooms() {
 
