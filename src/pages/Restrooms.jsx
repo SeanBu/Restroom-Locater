@@ -49,7 +49,7 @@ function Restrooms() {
                         <div className={styles.restroomImage}>
                             <img src={restroom.image} alt="Restroom Image"></img>
                         </div>
-                        <Link to={`/admin/restrooms/edit/${restroom._id}`}>Edit Restroom</Link>
+                        <Link className={styles.edit} to={`/admin/restrooms/edit/${restroom._id}`}>Edit Restroom</Link>
                         <br></br>
                     </div>
                 )

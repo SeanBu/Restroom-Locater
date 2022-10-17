@@ -22,6 +22,10 @@
     font-size: 2em;
 }
 
+.edit {
+    color: greenyellow;
+}
+
 .adminLink>a:visited {
     color: greenyellow;
 }
