@@ -24,7 +24,7 @@ function Register() {
             }
         }
 
-        const response = await fetch('/auth/register', config);
+        const response = await fetch('https://restroom-locater.herokuapp.com/auth/register', config);
         const currentUser = await response.json();
 
         localStorage.setItem("token", currentUser.token);
@@ -33,7 +33,7 @@ function Register() {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("/auth/isUserAuth", { headers: { "x-access-token": localStorage.getItem("token") } });
+            const response = await fetch("https://restroom-locater.herokuapp.com/auth/isUserAuth", { headers: { "x-access-token": localStorage.getItem("token") } });
             const sResponse = await response.json();
             if (sResponse.isLoggedIn) navigate("/");
         }

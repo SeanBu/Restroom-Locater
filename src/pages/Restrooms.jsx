@@ -8,7 +8,7 @@ function Restrooms() {
     const [restrooms, setRestrooms] = useState([]);
 
     async function fetchData() {
-        const response = await fetch("/admin/allrestrooms", { headers: { "Content-type": "application/json" } });
+        const response = await fetch("https://restroom-locater.herokuapp.com/admin/allrestrooms", { headers: { "Content-type": "application/json" } });
         const jResponse = await response.json();
         setRestrooms(...jResponse);
     }
@@ -49,7 +49,7 @@ function Restrooms() {
                         <div className={styles.restroomImage}>
                             <img src={restroom.image} alt="Restroom Image"></img>
                         </div>
-                        <Link className={styles.edit} to={`/admin/restrooms/edit/${restroom._id}`}>Edit Restroom</Link>
+                        <Link className={styles.edit} to={`https://restroom-locater.herokuapp.com/admin/restrooms/edit/${restroom._id}`}>Edit Restroom</Link>
                         <br></br>
                     </div>
                 )

@@ -4,18 +4,6 @@ import { useParams } from 'react-router-dom'
 
 function EditRestroom() {
 
-    const [restroomInfo, setRestroomInfo] = useState();
-
-    // const initialState = {
-    //     lat: restroomInfo.lat,
-    //     lng: restroomInfo.lng,
-    //     address: restroomInfo.address,
-    //     cleanlinessRating: restroomInfo.cleanlinessRating,
-    //     locationRating: restroomInfo.locationRating,
-    //     description: restroomInfo.description,
-    //     image: restroomInfo.image
-    // }
-
     const [newForm, setNewForm] = useState();
     let { restroomID } = useParams();
 
@@ -58,7 +46,6 @@ function EditRestroom() {
         async function fetchData() {
             const response = await fetch(`/admin/editrestroom/${restroomID}`, { headers: { "Content-type": "application/json" } });
             const sResponse = await response.json();
-            setRestroomInfo(sResponse);
             setNewForm(sResponse);
         }
         fetchData();
