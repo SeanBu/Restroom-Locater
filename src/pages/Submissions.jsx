@@ -35,7 +35,7 @@ function Submissions() {
                         <br></br>
                     </div>
                 )
-            }) : console.log("Loading Users...")}
+            }) : console.log("Loading Submissions...")}
         </div>
     )
 }

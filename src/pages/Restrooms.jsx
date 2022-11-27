@@ -32,7 +32,7 @@ function Restrooms() {
                             <p>Lat: <div className={styles.restroomData}>{restroom.lat}</div></p>
                         </div>
                         <div className={styles.restroomHeader}>
-                            <p>Lng Email: <div className={styles.restroomData}>{restroom.lng}</div></p>
+                            <p>Lng: <div className={styles.restroomData}>{restroom.lng}</div></p>
                         </div>
                         <div className={styles.restroomHeader}>
                             <p>Address: <div className={styles.restroomData}>{restroom.address}</div></p>
@@ -53,7 +53,7 @@ function Restrooms() {
                         <br></br>
                     </div>
                 )
-            }) : console.log("Loading Users...")}
+            }) : console.log("Loading Restrooms...")}
         </div>
     )
 }
